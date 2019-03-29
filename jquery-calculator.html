@@ -124,32 +124,41 @@ var sol = 0;
         $("#result").text(sol);
         break;
 
-
         case "*":
         sol = num1 * num2;
         $("#result").text(sol);
         break;
-
 
         case "/":
         sol = num1/num2;
         $("#result").text(sol);
         break;
 
-
         case "^":
         sol = Math.pow(num1, num2);
         $("#result").text(sol);
         break;
-
-
-
 
         default:
         break;
       }
       console.log(index);
     }
+  });
+
+  $(".clear").on("click", function() {
+    console.log("--- Clicked on Clear ---");
+    index = 1;
+    num1 = 0;
+    num2 = 0;
+    op = "";
+
+    $("#first-number").text("");
+    $("#operator").text("");
+    $("#second-number").text("");
+    $("#result").text("");
+
+
   });
 
 
